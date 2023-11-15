@@ -510,13 +510,21 @@ void CWorld::Precache()
 
 	g_pLastSpawn = NULL;
 
+
+	CVAR_SET_STRING("sv_gravity", "0");
+	CVAR_SET_STRING("sv_stepsize", "18");
+
+// OLD GRAVITY CODE
+
+/*
 #if 1
 	CVAR_SET_STRING("sv_gravity", "800"); // 67ft/sec
 	CVAR_SET_STRING("sv_stepsize", "18");
 #else
 	CVAR_SET_STRING("sv_gravity", "384"); // 32ft/sec
 	CVAR_SET_STRING("sv_stepsize", "24");
-#endif
+#endif 
+*/ 
 
 	CVAR_SET_STRING("room_type", "0"); // clear DSP
 
